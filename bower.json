@@ -1,0 +1,13 @@
+{
+  "name": "github-graph",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tjlav5/github-graph",
+  "authors": [
+    "TJ Lavelle <tjlav5@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.21"
+  }
+}

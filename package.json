@@ -37,6 +37,10 @@
     "connect-livereload": "^0.4.0",
     "q": "^1.0.1",
     "mysql": "^2.4.2",
-    "gulp-html-replace": "^1.1.0"
+    "gulp-html-replace": "^1.1.0",
+    "gulp-rename": "^1.2.0",
+    "main-bower-files": "^1.0.2",
+    "gulp-browserify": "^0.5.0",
+    "gulp-sass": "^0.7.2"
   }
 }

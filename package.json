@@ -1,0 +1,41 @@
+{
+  "name": "lavelle-io",
+  "version": "0.0.0",
+  "description": "My personal website.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tjlav5/lavelle-io.git"
+  },
+  "author": "TJ Lavelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjlav5/lavelle-io/issues"
+  },
+  "homepage": "https://github.com/tjlav5/lavelle-io",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "^4.7.2",
+    "logfmt": "^1.1.2",
+    "connect-modrewrite": "^0.7.7",
+    "serve-static": "^1.4.3",
+    "pg": "^3.4.0",
+    "github": "^0.2.1",
+    "sequelize": "^1.7.9",
+    "lodash": "^2.4.1",
+    "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-livereload": "^2.1.0",
+    "connect-livereload": "^0.4.0",
+    "q": "^1.0.1",
+    "mysql": "^2.4.2"
+  }
+}

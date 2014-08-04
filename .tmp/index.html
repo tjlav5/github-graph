@@ -3,8 +3,8 @@
     <title>lavelle-io</title>
     <link rel="stylesheet" href="github-graph.min.css">
   </head>
-  <body>
-    Hello World!
+  <body ng-app="github-graph">
+    <graph ng-controller="GraphController" repos="repos"></graph>
     <script src="vendor.min.js"></script>
     <script src="github-graph.min.js"></script>
   </body>

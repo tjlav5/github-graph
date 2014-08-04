@@ -64,6 +64,7 @@ app.get('/api/github/:user/:repo/languages', function (req, res) {
         user: req.params.user,
         repo: req.params.repo
       }, function (err, languages) {
+        delete languages.meta;
         res.send(languages);
       });
     } catch (e) {

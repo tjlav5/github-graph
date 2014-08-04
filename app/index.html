@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="github-graph.scss" media="screen" charset="utf-8">
     <!-- endbuild -->
   </head>
-  <body>
-    Hello World!
+  <body ng-app="github-graph">
+    <graph ng-controller="GraphController" repos="repos"></graph>
     <!-- build:vendor_js -->
     <script src="vendor.js"></script>
     <!-- endbuild -->

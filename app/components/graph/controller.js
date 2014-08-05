@@ -18,12 +18,15 @@ module.exports = ['$scope', '$http', function ($scope, $http) {
   window.init = function () {
     getFollowers('tjlav5').success(function (followers) {
       lodash.forEach(followers, function (follower) {
-        $scope.repos[follower.login] = {};
+        $scope.repos[follower.login] = {
+          repos: {},
+          avatar: follower.avatar_url
+        };
         getRepos(follower.login).success(function (repos) {
           lodash.forEach(repos, function (repo) {
-            $scope.repos[follower.login][repo.name] = {};
+            $scope.repos[follower.login].repos[repo.name] = {};
             getLanguages(follower.login, repo.name).success(function (languages) {
-              $scope.repos[follower.login][repo.name] = languages;
+              $scope.repos[follower.login].repos[repo.name] = languages;
             });
           });
         });

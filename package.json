@@ -32,7 +32,9 @@
     "pg": "^3.4.0",
     "q": "^1.0.1",
     "sequelize": "^1.7.9",
-    "serve-static": "^1.4.3"
+    "serve-static": "^1.4.3",
+    "body-parser": "^1.5.2",
+    "request": "^2.39.0"
   },
   "devDependencies": {
     "connect-livereload": "^0.4.0",

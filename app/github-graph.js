@@ -4,6 +4,7 @@ var app = angular.module('github-graph', [
   'ui.router',
   'github-graph.templates',
   require('./components/connect').name,
+  require('./components/authorize').name,
   require('./components/graph').name
 ])
 .config(require('./states'));

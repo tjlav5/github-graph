@@ -17,6 +17,15 @@ module.exports = ['$stateProvider', '$urlRouterProvider', '$locationProvider',
           }
         }
       })
+      .state('authenticate', {
+        url: "/authenticate?code",
+        views: {
+          'main': {
+            templateUrl: '/components/authorize/index.html',
+            controller: 'AuthorizeController'
+          }
+        }
+      })
       .state('app', {
         url: "/:rootUser",
         views: {

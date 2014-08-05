@@ -1,4 +1,5 @@
 var express = require('express'),
+    bodyParser = require('body-parser'),
     logfmt = require('logfmt'),
     gulp = require('gulp'),
     modRewrite = require('connect-modrewrite'),
@@ -24,7 +25,8 @@ module.exports = function () {
     } else {
       var app = express();
 
-      app.use(logfmt.requestLogger())
+      app.use(bodyParser.json())
+        .use(logfmt.requestLogger())
         .use(github)
         .use(modRewrite([
           '!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.gif|\\.bmp|\\.woff|\\.ttf|\\.swf|\\.ico$ /index.html [L]'

@@ -2,9 +2,6 @@ var d3 = require('d3'),
     d3Tooltip = require('d3-tooltip'),
     lodash = require('lodash');
 
-var width = 960,
-    height = 500;
-
 module.exports = function () {
   return {
     restrict: 'E',
@@ -13,11 +10,16 @@ module.exports = function () {
       repos: '='
     },
     link: function (scope, elm, attrs) {
+
+      var width = 900,
+          height = 500;
+
+
       var color = d3.scale.category20();
 
       var force = d3.layout.force()
           .gravity(.05)
-          .distance(100)
+          .distance(250)
           .charge(-100)
           .size([width, height]);
 
@@ -28,22 +30,22 @@ module.exports = function () {
       var defs = svg.append('defs');
 
       defs.append('clipPath')
-        .attr('id', 'clip-32')
+        .attr('id', 'clip-64')
         .attr('pointer-events', 'none')
         .append('circle')
-          .attr('r', 16);
+          .attr('r', 32);
 
       defs.append('clipPath')
-        .attr('id', 'clip-48')
+        .attr('id', 'clip-96')
         .attr('pointer-events', 'none')
         .append('circle')
-          .attr('r', 24);
+          .attr('r', 48);
 
       var tooltip = d3Tooltip(d3);
 
       var circleSizeScale = d3.scale.linear();
       circleSizeScale.domain([0, 1]);
-      circleSizeScale.range([48, 32]);
+      circleSizeScale.range([96, 64]);
 
       window.graph = function () {
 
@@ -107,7 +109,7 @@ module.exports = function () {
                 // .on("mouseout", tooltip.hide);
 
           node.append("circle")
-            .attr("r", function (d) { return (circleSizeScale(d.group)/2.0) * 1.5; })
+            .attr("r", function (d) { return (circleSizeScale(d.group)/2.0) * 1.2; })
             .style("fill", function(d) { return color(d.group); })
             .on("mouseover", function(d) {
               var html = d.name;

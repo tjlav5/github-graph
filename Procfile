@@ -1,1 +1,1 @@
-web: node lavelle-io/build; node lavelle-io/serve;
+web: node github-graph/build; node github-graph/serve;

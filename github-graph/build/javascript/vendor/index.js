@@ -1,7 +1,8 @@
 var Q = require('q'),
     gulp = require('gulp'),
     rename = require('gulp-rename'),
-    mainBowerFiles = require('main-bower-files');
+    mainBowerFiles = require('main-bower-files'),
+    concat = require('gulp-concat');
 
 module.exports = function () {
 
@@ -14,7 +15,7 @@ module.exports = function () {
       bowerJson: 'bower.json'
     }
   }))
-    .pipe(rename('vendor.min.js'))
+    .pipe(concat('vendor.min.js'))
     .pipe(gulp.dest('.tmp'))
     .on('end', function () {
       deferred.resolve();

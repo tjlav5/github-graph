@@ -6,8 +6,14 @@ var Q = require('q'),
 module.exports = function () {
 
   var deferred = Q.defer();
-  
-  gulp.src(mainBowerFiles())
+
+  gulp.src(mainBowerFiles({
+    paths: {
+      bowerDirectory: 'app/lib',
+      bowerrc: '.bowerrc',
+      bowerJson: 'bower.json'
+    }
+  }))
     .pipe(rename('vendor.min.js'))
     .pipe(gulp.dest('.tmp'))
     .on('end', function () {

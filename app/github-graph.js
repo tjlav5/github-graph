@@ -1,3 +1,6 @@
+// var router = require('angular-ui-router');
+
 var app = angular.module('github-graph', [
-  require('./components/graph').name
+  // 'ui.router',
+  require('./components/graph')
 ]);

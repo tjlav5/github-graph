@@ -73,3 +73,24 @@ app.get('/api/github/:user/:repo/languages', function (req, res) {
   });
 
 });
+
+app.get('/api/github/authorize', function (req, res) {
+
+  console.log(req.param('code'));
+
+  // db.Key.find({where: {service: 'github'}}).success(function (key) {
+  //   try{
+  //     authenticate(key.get('key'));
+  //     github.repos.getLanguages({
+  //       user: req.params.user,
+  //       repo: req.params.repo
+  //     }, function (err, languages) {
+  //       delete languages.meta;
+  //       res.send(languages);
+  //     });
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // });
+
+});

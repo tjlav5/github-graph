@@ -8,6 +8,15 @@ module.exports = ['$stateProvider', '$urlRouterProvider', '$locationProvider',
     //
     // Now set up the states
     $stateProvider
+      .state('connect', {
+        url: "/connect",
+        views: {
+          'main': {
+            templateUrl: '/components/connect/index.html',
+            controller: 'ConnectController'
+          }
+        }
+      })
       .state('app', {
         url: "/:rootUser",
         views: {

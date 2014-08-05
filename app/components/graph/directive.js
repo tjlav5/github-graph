@@ -8,7 +8,7 @@ var width = 960,
 module.exports = function () {
   return {
     restrict: 'E',
-    template: '<div>HI</div>',
+    // template: '<div>HI</div>',
     scope: {
       repos: '='
     },

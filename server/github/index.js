@@ -31,7 +31,7 @@ app.get('/api/github/:user/followers', function (req, res) {
   db.Key.find({where: {service: 'github'}}).success(function (key) {
     try{
       authenticate(key.get('key'));
-      github.user.getFollowingFromUser({
+      github.user.getFollowers({
         user: req.params.user
       }, function (err, followers) {
         res.send(followers);
